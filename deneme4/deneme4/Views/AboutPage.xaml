@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme4.Views.AboutPage"
+             xmlns:vm="clr-namespace:deneme4.ViewModels"
+             Title="{Binding Title}"
+              Shell.TitleColor="White"
+             Shell.BackgroundColor="Gray"
+             Shell.TabBarIsVisible="True" >
+
+
+
+    <ContentPage Title="AKTÜEL"  IconImageSource="bimlogo.png"   Shell.TabBarBackgroundColor="Yellow"  >
+       
+            <ScrollView   VerticalScrollBarVisibility="Never" >
+            
+                
+                <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="20*"></ColumnDefinition>
+                    <ColumnDefinition Width="20*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+
+
+                </Grid.ColumnDefinitions>
+
+
+                <ListView x:Name="lstview3" Grid.Column="1" HasUnevenRows="True" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White"  >
+
+
+                                    <ImageButton Command="{Binding navigationpage}" Source="{Binding UrunResim3}" HeightRequest="128" BackgroundColor="White" BorderColor="Red"></ImageButton>
+                                    <Label Text="{Binding UrunIsmi3}"  Padding="50,0,0,0" ></Label>
+                                    <Label Text="{Binding UrunFiyat3}" TextColor="Black" Padding="70,0,0,0" ></Label>
+                                    <Button Text="Sadece Mağazalarda" TextColor="Black" FontSize="Medium" BackgroundColor="Gray" CornerRadius="12"  Margin="15" ></Button>
+
+
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+                <ListView x:Name="lstview4" Grid.Column="2" HasUnevenRows="True" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White"  >
+
+
+                                    <ImageButton Command="{Binding navigationpage}" Source="{Binding UrunResim4}" HeightRequest="128" BackgroundColor="White" BorderColor="Red"></ImageButton>
+                                    <Label Text="{Binding UrunIsmi4}"  Padding="60,0,0,0" ></Label>
+                                    <Label Text="{Binding UrunFiyat4}" TextColor="Black" Padding="70,0,0,0" ></Label>
+                                    <Button Text="Sadece Mağazalarda" TextColor="Black" FontSize="Medium" BackgroundColor="Gray" CornerRadius="10" Margin="15" ></Button>
+
+
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+
+
+
+            </Grid>
+            
+        </ScrollView>
+
+
+    </ContentPage>
+
+    <ContentPage Title="ONLİNE"  BackgroundColor="White" IconImageSource="bimlogo.png"  >
+        <StackLayout>
+            <ScrollView VerticalScrollBarVisibility="Never">
+            <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                
+            </Grid.RowDefinitions>
+                
+                
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                
+                
+            </Grid.ColumnDefinitions>
+
+               
+                <ListView x:Name="lstview1" Grid.Column="1" HasUnevenRows="True" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White"  >
+
+
+                                <ImageButton Command="{Binding navigationpage}" Source="{Binding UrunResim}" HeightRequest="128" BackgroundColor="White" BorderColor="Red"></ImageButton>
+                                <Label Text="{Binding UrunIsmi}"  Padding="60,0,0,0" ></Label>
+                                <Label Text="{Binding UrunFiyat}" TextColor="Black" Padding="70,0,0,0" ></Label>
+                                        <Button Text="Sepete Ekle" TextColor="Black" FontSize="Medium" BackgroundColor="Red" CornerRadius="10" Margin="15" ></Button>
+                                    
+                                    
+                                    
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                </ListView>
+            <ListView x:Name="lstview2" Grid.Column="2" HasUnevenRows="True" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="White"  >
+
+
+                                <ImageButton Command="{Binding navigationpage}" Source="{Binding UrunResim2}" HeightRequest="128" BackgroundColor="White" BorderColor="Red"></ImageButton>
+                                <Label Text="{Binding UrunIsmi2}"  Padding="60,0,0,0" ></Label>
+                                <Label Text="{Binding UrunFiyat2}" TextColor="Black" Padding="70,0,0,0" ></Label>
+                                        <Button Text="Sepete Ekle" TextColor="Black" FontSize="Medium" BackgroundColor="Red" CornerRadius="10" Margin="15" ></Button>
+
+
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+
+
+
+
+
+
+
+
+            <SearchBar Placeholder="Ürün Ara" CancelButtonColor="red" HorizontalTextAlignment="Start" 
+                       FontSize="Large" HorizontalOptions="Start" VerticalOptions="Start" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ></SearchBar>
+
+
+
+
+        </Grid>
+
+        </ScrollView>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="CELL" BackgroundColor="White" IconImageSource="bimlogo.png"  >
+        <StackLayout>
+            <Image Source="bimcell.png" Aspect="AspectFit"  HorizontalOptions="StartAndExpand"
+               VerticalOptions="StartAndExpand" WidthRequest="600" HeightRequest="170">
+
+            </Image>
+            <Label Text="BİMcell ile iletişim kalitenizden ödün vermeden, bugüne kadar ödediğinizden çok daha uygun fiyata konuşabilir, mesajlaşabilir ve internete bağlanabilirsiniz. Çok avantajlı BİMcell paketlerinden ihtiyacınıza en uygun olanı seçebilirsiniz."
+                   FontSize="20" HorizontalOptions="Center">
+
+            </Label>
+            <Label Text="Nasıl BİMcell'li olunur detaylı bilgi için tıklayınız. BİMcell online işlemler uygulamasını indirmek için tıklayınız."
+                   FontSize="18" TextColor="Black"></Label>
+
+
+
+
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="PARA" BackgroundColor="White" IconImageSource="bimlogo.png" >
+        <StackLayout>
+            <Image Source="bimpara.png" Aspect="AspectFit" HorizontalOptions="StartAndExpand"
+               VerticalOptions="StartAndExpand" WidthRequest="700" HeightRequest="230">
+
+            </Image>
+            <Label Text="BİMPARA ile temazssız öde temassız paylaş!" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand">
+
+            </Label>
+            <Label Text=" Temassız ödeme ve transfer uygulaması BİMPARA ile BİM mağazalarında kredi kartı veya nakit paraya ihtiyaç duymadan cep telefonundan tamamen temassız ödeme yapabilirsiniz. 
+" FontSize="16" HorizontalOptions="CenterAndExpand">
+            </Label>
+            <Label Text="Ayrıca aile fertlerinin veya ihtiyaç sahiplerinin telefon numaralarına istenildiği kadar BİMPARA gönderebilirsiniz.
+Telefonunuza BİMPARA uygulamasını linkten indirebilirsiniz." FontSize="16" HorizontalOptions="CenterAndExpand"></Label>
+        </StackLayout>
+    </ContentPage>
+
+
+
+
+
+
+
+</TabbedPage>
+

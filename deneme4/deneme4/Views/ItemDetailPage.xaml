@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme4.Views.ItemDetailPage"
+             Title="Sepetim" 
+             Shell.NavBarIsVisible="True"
+             Shell.TitleColor="White"
+             Shell.BackgroundColor="Red">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Image Source="sepet.png" Aspect="AspectFit" HeightRequest="100"/>
+            <Label Text="Sepetinizde ürün bulunmamaktadır." TextColor="Black" FontSize="Medium" HorizontalTextAlignment="Center"/>
+            <Button VerticalOptions="Center" BackgroundColor="Red" Text="Alışverişe Başla" Command="{Binding LoginCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
